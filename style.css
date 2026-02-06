@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Container */
+.container {
+  background: white;
+  padding: 30px 25px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+  max-width: 400px;
+  width: 90%;
+  z-index: 2;
+}
+
+h1 {
+  color: #e91e63;
+  font-size: 24px;
+}
+
+/* Buttons */
+.buttons {
+  margin-top: 25px;
+  position: relative;
+}
+
+button {
+  padding: 12px 28px;
+  margin: 10px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#yes {
+  background-color: #e91e63;
+  color: white;
+}
+
+#no {
+  background-color: #ddd;
+  position: relative;
+}
+
+/* Response text */
+#response {
+  margin-top: 25px;
+  font-size: 18px;
+  color: #4caf50;
+  font-weight: bold;
+}
+
+/* Hearts animation */
+.hearts span {
+  position: absolute;
+  color: rgba(255,255,255,0.8);
+  font-size: 20px;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
